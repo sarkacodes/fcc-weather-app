@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    font-family: Rajdhani, serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to right, #fddb92, #d1fdff);
+    text-align: center;
+    color: #2e6069;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    display: block;
+}
+
+.content {
+    visibility: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 4em;
+    grid-row-gap: 4em;
+    max-width: 960px;
+    min-width: 240px;
+}
+
+.block {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 5px;
+    border-radius: 3%;
+}
+
+.block-one {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-two {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    font-size: calc(1rem + 0.5vmin);
+}
+
+.block-two__item {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.block-three {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    font-size: calc(1rem + 0.5vmin);
+}
+
+.item {
+    padding: 1em;
+}
+
+.value {
+    font-size: calc(1rem + 0.4vw);
+}
+
+#info-city {
+    font-size: calc(1.3rem + 1vmin);
+}
+
+#info-temperature {
+    font-size: calc(1.8rem + 2.5vmin);
+    margin-top: 1em;
+}
+
+#info-weather {
+    font-size: calc(1.2em + 0.7vmin);
+}
+
+#info-weatherdetail {
+    font-size: calc(.9em + 0.5vmin);
+}
+
+button {
+    width: 200px;
+    font-size: calc(.7rem + 0.3vmax);
+    margin-top: 2.5em;
+    color: #fff;
+    background: #3a8dac;
+    padding: .5em 1em;
+    cursor: pointer;
+    border-width: 0px;
+    border-radius: 2px;
+    font-weight: 400;
+    box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background: #559fbb;
+}
+
+@media (max-width: 550px) {
+    body {
+        margin-top: 5px;
+        padding-bottom: 5px;
+        display: block;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100vh 1fr auto;
+        grid-row-gap: 10px;
+        margin: 0 auto;
+    }
+
+    .block-one {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .block-two {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .block-three {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-gap: .7em;
+    }
+}
+
+/* Animations */
+
+.animation {
+    animation-fill-mode: forwards;
+}
+
+.fade-in {
+    animation: fadein 1s;
+}
+
+.fade-out {
+    animation: fadeout;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

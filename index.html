@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Weather App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani" />
+    </head>
+
+    <body>
+        <div class="content">
+            <div class="block block-one">
+                <div>
+                    <span id="info-city"></span>
+                    <span id="info-temperature" class="animation"></span>
+                    <span id="info-icon"></span>
+                    <span id="info-weather"></span>
+                    <span id="info-weatherdetail"></span>
+                    <button id="btn">Switch to Fahrenheit</button>
+                </div>
+            </div>
+
+            <div class="block block-two">
+                <div class="block-two__item item">
+                    <span>💨 Wind speed</span>
+                    <span id="info-wind-speed" class="value"></span>
+                </div>
+                <div class="block-two__item item">
+                    <span>💨 Wind direction</span>
+                    <span id="info-wind-dir" class="value"></span>
+                </div>
+                <div class="block-two__item item">
+                    <span>💧 Humidity</span>
+                    <span id="info-humidity" class="value"></span>
+                </div>
+                <div class="block-two__item item">
+                    <span>🌎 Pressure</span>
+                    <span id="info-pressure" class="value"></span>
+                </div>
+            </div>
+
+            <div class="block block-three">
+                <div class="block-three_item item">
+                    <p>🌅 Sunrise</p>
+                    <p id="info-sunrise" class="value"></p>
+                </div>
+                <div class="block-three_item item">
+                    <p>🌄 Sunset</p>
+                    <p id="info-sunset" class="value"></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
